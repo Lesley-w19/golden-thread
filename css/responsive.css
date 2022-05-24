@@ -15,7 +15,7 @@
 
 @media (min-width:0) and (max-width:830px){
   #header{
-    background:#b34e69;
+    background:	goldenrod;
     height: 20vh;
   }
   #description{
