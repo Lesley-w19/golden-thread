@@ -15,15 +15,16 @@
 
 @media (min-width:0) and (max-width:830px){
   #header{
-    background:	goldenrod;
-    height: 20vh;
+    /* background:	goldenrod; */
+    height: 60vh;
   }
   #description{
     display:none;
   }
   #header .header-content {
-    width: 90%;
+    width: 80%;
   }
+  
   .header-content p {
     color:#f7f7f7;
     font-size: 20px;
@@ -44,8 +45,13 @@
   nav {
     padding: 10px 15px;
   }
+  .nAv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .nav-menu {
-    margin-top: 40px;
+    margin-top: 8px;
     display: none;
     float: none;
     width: 100%;
@@ -115,8 +121,13 @@
   nav {
     padding: 20px 15px;
   }
+  .nAv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .nav-menu {
-    margin-top: 40px;
+    margin-top: 8px;
     display: none;
     float: none;
     width: 100%;
@@ -154,6 +165,13 @@
     max-width: 100%;
     margin-bottom: 0;
   }
+  /* services */
+  .services-block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
   /* portfolio */
   #portfolio .portfolio-list .nav li {
     float: none;
@@ -186,8 +204,13 @@
   nav {
     padding: 20px 15px;
   }
+  .nAv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .nav-menu {
-    margin-top: 40px;
+    margin-top: 8px;
     display: none;
     float: none;
     width: 100%;
@@ -257,8 +280,13 @@
   nav {
     padding: 20px 15px;
   }
+  .nAv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .nav-menu {
-    margin-top: 40px;
+    margin-top: 8px;
     display: none;
     float: none;
     width: 100%;
@@ -327,8 +355,13 @@
   nav {
     padding: 20px 15px;
   }
+  .nAv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   .nav-menu {
-    margin-top: 40px;
+    margin-top: 8px;
     display: none;
     float: none;
     width: 100%;
