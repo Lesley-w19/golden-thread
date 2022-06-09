@@ -180,8 +180,7 @@ p {
 }
 
 .paddsection {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding: 90px 20px;
 }
 
 .paddsections {
@@ -248,8 +247,9 @@ nav ul li a {
 }
 .nAv {
   display: flex;
-  align-items: center;
+  align-items: center !important;
   justify-content: space-between;
+  padding: 16px 0;
 }
 .logo {
   float: left;
@@ -288,11 +288,11 @@ nav ul li a {
 #header .header-video {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -200px !important;
   z-index: -1;
 }
 
-#header .header-content {
+.header-content {
   text-align: center;
   text-transform: uppercase;
 }
@@ -344,6 +344,7 @@ nav ul li a {
   width: 100%;
   height: auto;
   background: #f7f7f7;
+  background-color: var(--primary-white);
   padding-top: 100px;
 }
 
@@ -369,7 +370,6 @@ nav ul li a {
 
 .my-logo {
   font-family: "Pacifico";
-  font-size: 30px;
   color: black;
 }
 
@@ -380,7 +380,10 @@ nav ul li a {
   text-align: left;
   color: #333;
 }
-
+#about .about-btn {
+  margin: 0;
+  margin-left: -5px;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*   Services
@@ -501,9 +504,12 @@ nav ul li a {
 }
 
 #portfolio .portfolio-container {
-  display: inline-block;
+  /* display: inline-block; */
   margin-bottom: 50px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .portfolio-thumbnail {
@@ -516,6 +522,36 @@ nav ul li a {
   max-width: 100%;
 }
 
+/* ----------------------------------------------------------------------------------------Clients
+---------------------- */
+#clients {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+#clients .section-title {
+  margin: 20px;
+}
+.slide-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.slide {
+  border: 1.5px solid #ddd;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+}
+.slide img {
+  width: 100px;
+  height: 100px;
+}
+.slide:hover img {
+  width: 130px;
+  height: 130px;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  Journal
   /*-----------------------------------------------------------------------------------*/
@@ -525,7 +561,7 @@ nav ul li a {
   height: auto;
   width: 100%;
   background: #f7f7f7;
-  padding-bottom: 60px;
+  padding: 30px 20px 60px 20px;
   position: relative;
 }
 
@@ -557,7 +593,7 @@ nav ul li a {
   display: block;
   font-size: 19px;
   line-height: 24px;
- margin-left: 3px;
+  margin-left: 3px;
   font-weight: 500;
   color: var(--secondary-yellow);
   text-transform: uppercase;
@@ -583,7 +619,6 @@ nav ul li a {
   font-size: 14px;
   line-height: 24px;
   margin-left: 5px;
-
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -594,7 +629,7 @@ nav ul li a {
   height: auto;
   width: 100%;
 }
-.contact-contact h2{
+.contact-contact h2 {
   color: var(--primary-yellow);
 }
 .contact-details {
@@ -652,18 +687,20 @@ nav ul li a {
 
 #footer {
   background: #f7f7f7;
-  padding :30px 0 20px 0;
- 
+  padding: 10px 0;
 }
 
 #footer .socials-media {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #footer .socials-media ul {
   display: inline-block;
   float: none;
-  margin: 0 0 20px 0;
+  margin: 10px 0;
 }
 
 #footer .socials-media ul li {
@@ -688,6 +725,7 @@ nav ul li a {
 
 #footer .socials-media ul li a:hover {
   color: #b8a07e;
+  color: var(--secondary-yellow);
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -695,18 +733,26 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#footer p {
+.footer-copyright {
+  height: 8vh;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-yellow);
+  text-align: center;
+  line-height: 2px;
+}
+.footer-copyright p {
   font-size: 12px;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
   font-weight: 500;
-  margin-top: 0;
   text-transform: uppercase;
+  color: var(--primary-black) !important;
 }
-#footer p span{
-  color: var(--secondary-yellow);
-}
-.credits {
-  font-size: 13px;
+
+.footer-copyright p span {
+  color: var(--primary-white);
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -738,16 +784,14 @@ nav ul li a {
 .flip-card-front {
   background-color: #bbb;
   color: black;
-
 }
-.flip-card-front img{
+.flip-card-front img {
   width: 300px;
   height: 280px;
-
 }
 /* Style the back side */
 .flip-card-back {
-   width: 300px;
+  width: 300px;
   height: 280px;
   color: black;
   transform: rotateY(180deg);
@@ -757,27 +801,171 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
- 
 }
-.flip-card-back h1{
+.flip-card-back h1 {
   color: var(--primary-black);
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 1px;
-  font-family: 'Acme', sans-serif;
+  font-family: "Acme", sans-serif;
   font-weight: bold;
 }
-.flip-card-back p{
+.flip-card-back p {
   color: var(--primary-white);
   padding: 0 5px;
   font-size: 15px;
 }
-.flip-card-back a{
+.flip-card-back a {
   text-transform: capitalize;
   font-weight: bolder;
   letter-spacing: 1px;
   transition: var(--transition);
 }
-.flip-card-back a:hover{
+.flip-card-back a:hover {
   text-decoration: underline !important;
+}
+
+/* ---------------------ABOUT PAGE */
+.about-navbar {
+  width: 100%;
+  padding: 10px 20px;
+  position: fixed;
+}
+.about-navbar .about-navlinks {
+  justify-content: end;
+}
+.about-navbar button {
+  outline: none;
+  border: none;
+  color: var(--primary-black);
+}
+.about-navbar .navbar-nav {
+  padding: 10px;
+  text-align: center;
+}
+.about-navbar .navbar-nav a {
+  font-size: 14px;
+  font-family: "Poppins", helvetica;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--primary-black) !important;
+  transition: var(--transition);
+}
+.about-navbar .navbar-nav a:hover,
+.about-navbar .navbar-nav .active {
+  color: var(--secondary-yellow) !important;
+}
+.about-hero {
+  overflow: hidden;
+  background-color: var(--primary-white);
+}
+.about-hero #header-about {
+  height: 50vh !important;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+.about-hero .header-content {
+  position: absolute;
+  left: 10%;
+  bottom: 30%;
+}
+.about-hero .header-content h6 {
+  margin: 0;
+}
+.about-hero .header-content h1 {
+  margin: 0;
+}
+
+.about-services {
+  padding: 40px 0;
+  width: 100%;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+}
+
+.about-services .services-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.about-services .services-block i {
+  font-size: 70px !important;
+}
+
+.about-services .separator {
+  width: 60%;
+  margin: 20px auto;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+.about-services .slide{
+  border: none;
+}
+.carousel {
+  padding: 20px;
+  margin-top: 50px;
+}
+.carousel ol {
+  margin-top: 30px;
+}
+.carousel-btns, .carousel-indicators{
+  color: #6e4e04 !important;
+}
+.about-block i {
+  margin-bottom: 10px !important;
+  font-size: 42px;
+  color: var(--secondary-yellow);
+}
+
+.about-team {
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.about-team .section-title p {
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+}
+.about-team .card {
+  border: none;
+  transition: var(--transition);
+}
+.about-team .card:hover {
+  border-bottom: 0.2px solid rgba(221, 221, 221, 0.479);
+}
+.about-team .card .card-icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.about-team .card-icons .btn {
+  margin: 0 3px;
+  padding: 2px 18px 5px 18px;
+  border-radius: 2px;
+}
+.about-team i {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* ------------------PORTFOLIO PAGE -------------*/
+#portfolio-portfolio {
+  padding: 20px;
+}
+#portfolio-portfolio .flip-card div {
+  height: 200px !important;
+}
+.btn-portfolio{
+  padding: 0 60px 20px 70px !important;
+  letter-spacing: 1.1px;
 }
