@@ -288,7 +288,8 @@ nav ul li a {
 #header .header-video {
   position: absolute;
   right: 0;
-  bottom: -200px !important;
+  bottom:0;
+/*   bottom: -200px !important; */
   z-index: -1;
 }
 
